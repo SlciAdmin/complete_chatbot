@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLCI Support Team</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+
+        <div id="chat-header">
+            <img src="{{ url_for('static', filename='tara.png') }}" id="bot-avatar">
+
+            <div id="header-text">
+                <h2>SLCI Assistant (Tara)</h2>
+                <p class="motto">"Do Business, Not HR"</p>
+            </div>
+
+            <div class="header-actions">
+                <span id="save-pdf-btn" title="Save Chat as PDF">
+                    📄
+                </span>
+                <span id="refresh-btn">&#x21bb;</span>
+            </div>
+            </div>
+
+        <div id="chat-box">
+            <div class="bot-message">
+                <img src="{{ url_for('static', filename='tara.png') }}" class="avatar">
+
+                <div class="message-text">
+                    👋 Hi! I'm Tara from SLCI.<br>
+                    How can I assist you today?
+                </div>
+            </div>
+        </div>
+
+        <div id="category-buttons">
+            <a href="https://forms.gle/PbEgiuVKa1Z5nLyi7" target="_blank" class="category-btn">Book Appointment</a>
+            <a href="https://forms.gle/ZWzhQUcDvydXi9aB8" target="_blank" class="category-btn">Schedule a Call</a>
+
+            <button class="category-btn chat-btn">Contact Support</button>
+            <button class="category-btn chat-btn">Our Services</button>
+        </div>
+
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Ask anything...">
+        
+            <button id="send-btn">Send</button>
+        </div>
+
+    </div>
+  <!-- MUST LOAD FIRST -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- AutoTable plugin for v2 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.1/jspdf.plugin.autotable.min.js"></script>
+
+<!-- Optional for screenshots -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- Your script last -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
