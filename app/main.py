@@ -140,5 +140,5 @@ def min_wage_route():
 
 
 if __name__ == "__main__":
-    print("🚀 Running SLCI Chatbot at http://127.0.0.1:5600")
-    app.run(host="0.0.0.0", port=5600, debug=False)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)

@@ -42,7 +42,7 @@ llm = ChatGroq(
 # 2️⃣ Load FAISS Index
 # -------------------------
 INDEX_PATH = "index"
-logging.info("🔍 Loading FAISS index...")
+
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 try:
