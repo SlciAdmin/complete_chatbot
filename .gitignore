@@ -2,6 +2,6 @@
 slci_faiss_index/
 slcibot312
 .env
-templates
+templates/
 static/styles.css
 __pycache__/
