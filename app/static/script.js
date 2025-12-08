@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         addMessageToChatbox("Typing...", "bot", "typing-indicator-wrapper");
 
         try {
-            const response = await fetch("http://127.0.0.1:5600/chat", {
+            const response = await fetch("http://127.0.0.1:5000/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userText, session_id: sessionId }),
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <b>🏷 Act:</b> ${meta.act_name}<br>
                 <b>🧮 DA:</b> ${meta.da}<br>
                 <b>🗓 Effective From:</b> ${meta.effective_from}<br>
-                <b>📆 Updated As On:</b> ${meta.updated_as_on}<br>
+                
                 <br>
             `;
 
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 doc.setFontSize(11);
                 doc.text(`State: ${meta.state}`, 14, yPos); yPos += 6;
                 doc.text(`Effective From: ${meta.effective_from}`, 14, yPos); yPos += 6;
-                doc.text(`Updated As On: ${meta.updated_as_on}`, 14, yPos); yPos += 8;
+                // doc.text(`Updated As On: ${meta.updated_as_on}`, 14, yPos); yPos += 8;
                 if (meta.pdf_url) {
                     doc.setTextColor(0, 0, 255);
                     doc.text(`Govt Notification PDF: ${meta.pdf_url}`, 14, yPos);
