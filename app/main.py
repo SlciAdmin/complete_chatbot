@@ -25,17 +25,43 @@ logging.basicConfig(
 )
 
 STATE_LIST = [
-    "Andaman And Nicobar Islands",
-    "Arunachal Pradesh",
-    "Assam",
-    "Bihar",
-    "Gujarat",
-    "Jammu and Kashmir",
-    "Delhi",
-    "Daman and Diu",
-    "Chattisgarh",
-    
+  "Andaman and Nicobar Islands",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chandigarh",
+  "Chhattisgarh",
+  "Dadra and Nagar Haveli and Daman and Diu",
+  "Delhi",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jammu and Kashmir",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Ladakh",
+  "Lakshadweep",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Puducherry",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal"
 ]
+
 
 
 @app.route("/")
@@ -128,8 +154,6 @@ def chat():
     except Exception as e:
         logging.error(f"Chat failed: {e}")
         return jsonify({"error": str(e)}), 500
-
-
 @app.route("/min-wage", methods=["GET"])
 def min_wage_route():
     state = request.args.get("state")
