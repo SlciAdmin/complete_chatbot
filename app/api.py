@@ -7,7 +7,6 @@ from typing import TypedDict, List, Union
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_core.messages import HumanMessage, AIMessage
@@ -17,7 +16,7 @@ from langchain_groq import ChatGroq
 
 
 # -------------------------
-# 1️⃣ Setup & Logging
+# 1️⃣ Setup & Logging    
 # -------------------------
 load_dotenv(".env")
 
@@ -135,7 +134,7 @@ def handle_contact_node(state: ChatState):
 
 def handle_appointment_node(state: ChatState):
     return reply_node(state,
-        "📅 Book an appointment by calling +91 9999329153 or emailing contact@slci.in."
+        "📅 Book an appointment by calling +91 9999329153 or emailing contact@slci.in. and fill this form "
     )
 
 

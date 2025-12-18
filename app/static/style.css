@@ -286,7 +286,7 @@ body {
     border-collapse: collapse;
     white-space: nowrap; 
     font-size: 11px;
-    min-width: 450px; /* ⭐ Adjusted minimum width for better visibility ⭐ */
+    min-width: 450px; 
 }
 
 .wage-table th {
